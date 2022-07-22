@@ -12,7 +12,7 @@
 /*******************************************/
 img{
   display: block;
-  margin: 0 auto;
+  margin: 0;
 }
 
 
@@ -69,26 +69,27 @@ body {
 }
 
 main {
-  margin: 7rem 0 12rem 0;
+  margin: 0;
   display: flex;
   justify-content: center;
   padding: 0 100px;
+  height: 88vh;
+  border-bottom: 1px solid red;
 }
 
 .leftMain, .rightMain {
-  height: 500px;
+  /* height: 500px; */
+  padding: 2rem 2rem 2rem 2rem;
 }
 
 .leftMain {
   width: 50%;
-  padding: 2rem;
 
 }
 .rightMain {
   width: 50%;
-  padding: 2rem;
-  display: block;
-  text-align: left;
+  /*display: block;
+  text-align: left; */
   /* flex-direction: column;
   justify-content: center; */
 }
@@ -107,8 +108,9 @@ main {
 }
 
 .leftMain img {
-  height: 100%;
   float: right;
+  height: 60%;
+  position:static;
   border: 1px solid black;
 }
 
@@ -123,6 +125,79 @@ main {
 .strike {
   text-decoration: line-through;
 }
+
+
+
+.newsletter {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+.scrollIcon {
+  margin-top: 5rem;
+}
+
+#scrollBtn {
+  pointer-events: auto !important;
+}
+
+.polterInfo {
+  
+  display: flex;
+  justify-content: space-between;
+  padding: 0 100px;
+  height: 100vh;;
+  border-top: 1px solid black; 
+  
+}
+
+.leftDetails {
+  margin: 2rem 0 4.7rem 0;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+}
+
+.leftDetails h1 {
+  font-weight: 700;
+  font-size: 5rem;
+  font-style: italic;
+}
+
+.leftDetails p {
+  font-weight: 100;
+  font-size: 2.5rem;
+  margin: 0
+}
+
+.midDetails, .rightDetails {
+  margin: 0 40px  2rem 40px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  text-align: justify;
+}
+
+input{
+  border: 2px solid black;
+  margin-right: 4px;
+  font-weight: 300;
+  padding-top: 4px;
+}
+
+button {
+  border: 2px solid black;
+  background: #fff;
+  font-weight: 600;
+  padding-top: 4px;
+}
+
 
 /* ANIMATIONS */
 
@@ -404,65 +479,4 @@ main {
             transform: translateY(0) translateX(0);
     opacity: 1;
   }
-}
-
-.newsletter {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
-  padding: 2rem;
-  margin: 2rem 0;
-}
-
-.scrollIcon {
-  margin-top: 5rem;
-}
-
-#scrollBtn {
-  pointer-events: auto !important;
-}
-
-.polterInfo {
-  
-  display: flex;
-  justify-content: space-between;
-  padding: 0 100px;
-}
-
-.leftDetails {
-  margin: 32rem 0 2rem 0;
-}
-
-.leftDetails h1 {
-  font-weight: 700;
-  font-size: 5rem;
-  margin-top: 4rem;
-  font-style: italic;
-}
-
-.leftDetails p {
-  font-weight: 100;
-  font-size: 2.5rem;
-  margin: 0
-}
-
-.midDetails, .rightDetails {
-  margin: 200px 50px 50px 50px;
-}
-
-input{
-  border: 2px solid black;
-  margin-right: 4px;
-  font-weight: 300;
-  padding-top: 4px;
-}
-
-button {
-  border: 2px solid black;
-  background: #fff;
-  font-weight: 600;
-  padding-top: 4px;
 }
