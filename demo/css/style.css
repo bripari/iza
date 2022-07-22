@@ -74,7 +74,6 @@ main {
   justify-content: center;
   padding: 0 100px;
   height: 88vh;
-  border-bottom: 1px solid red;
 }
 
 .leftMain, .rightMain {
@@ -153,12 +152,11 @@ main {
   justify-content: space-between;
   padding: 0 100px;
   height: 100vh;;
-  border-top: 1px solid black; 
   
 }
 
 .leftDetails {
-  margin: 2rem 0 4.7rem 0;
+  margin: 2rem 0 2rem 0;
   display: flex;
   flex-direction: column-reverse;
   align-items: flex-end;
