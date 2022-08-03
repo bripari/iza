@@ -611,6 +611,13 @@ footer a:hover {
   .strike {
     display: none;
   }
+  .leftMain {
+    padding: 1rem;
+  }
+
+  #subheading {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 480px){
