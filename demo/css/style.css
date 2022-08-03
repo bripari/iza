@@ -563,7 +563,7 @@ footer a:hover {
 }
 
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 980px){
   main {
     flex-direction: column;
     justify-content: flex-start;
@@ -614,15 +614,26 @@ footer a:hover {
   .leftMain {
     padding: 1rem;
   }
-
   #subheading {
     text-align: center;
   }
-}
+  .rightMain h1 {
+    font-size: 3rem;
+    line-height: 2.8rem;
+  }
 
-@media screen and (max-width: 480px){
+  .rightMain p {
+    font-size: .8rem;
+  }
+  .scrollIcon {
+    margin-top: 2rem;
+  }
   .nav h1 {
     font-size: 3rem;
     line-height: 3rem;
   }
+}
+
+@media screen and (max-width: 480px){
+
 }
