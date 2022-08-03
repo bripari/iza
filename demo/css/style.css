@@ -72,7 +72,7 @@ main {
   margin: 0;
   display: flex;
   justify-content: center;
-  padding: 0 100px;
+  padding: 0 ;
   height: 88vh;
 }
 
@@ -93,7 +93,7 @@ main {
   width: 50%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 
@@ -102,13 +102,23 @@ main {
   font-size: 5rem;
   margin-top: 4rem;
   font-style: italic;
+  line-height: 65px;
 }
 
-.rightMain p {
-  font-weight: 100;
-  font-size: 2.5rem;
+
+.subtitle {
+  font-weight: 500;
+  font-style: italic;
+  font-size: 2.2rem;
   margin: 0
 }
+
+#subheading {
+  font-size: 2rem !important;
+  font-weight: 100 !important;
+  padding-top: 2rem;
+}
+
 
 .leftMain img {
   height: 60%;
@@ -127,6 +137,25 @@ main {
   text-decoration: line-through;
 }
 
+
+.polterInfo {
+  
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem 0 1rem;
+  height: 100vh;;
+  
+}
+
+.leftDetails {
+  margin: 0 0 2rem 0;
+  padding-right: 2rem; 
+  display: flex;
+  width: 35%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
 
 
 .newsletter {
@@ -148,41 +177,30 @@ main {
   pointer-events: auto !important;
 }
 
-.polterInfo {
-  
-  display: flex;
-  justify-content: space-between;
-  padding: 0 1rem 0 3rem;
-  height: 100vh;;
-  
-}
 
-.leftDetails {
-  margin: 0 0 2rem 0;
-  padding-right: 3rem; 
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: flex-end;
-}
 
 .leftDetails h1 {
   font-weight: 700;
   font-size: 5rem;
   font-style: italic;
+  line-height: 65px;
 }
 
 .leftDetails p {
   font-weight: 100;
   font-size: 2.5rem;
+ 
   margin: 0
 }
 
 .midDetails, .rightDetails {
   margin: 0 0  2rem 0;
-  padding-right: 2rem;
+  padding: 2rem 2rem;
   display: flex;
-  flex-direction: column-reverse;
+  width: 65%;
+  flex-direction: column;
   align-items: flex-end;
+  justify-content: flex-end;
   text-align: justify;
 }
 
@@ -198,9 +216,40 @@ button {
   background: #fff;
   font-weight: 600;
   padding-top: 4px;
+  margin: 0 5px;
 }
 
+button:hover {
+  background: black;
+  color: white;
+}
 
+footer {
+  width: 100%;
+  border-top: 2px solid black;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: black;
+  color: white;
+}
+
+footer p {
+  font-size: .8rem;
+}
+
+footer a {
+  color: white !important;
+}
+
+footer a:hover {
+  color:rgb(145, 145, 145) !important
+}
+
+.selected {
+  color:rgb(145, 145, 145) !important;
+}
 /* ANIMATIONS */
 
 .scale-in-hor-center {
@@ -510,5 +559,63 @@ button {
     -webkit-transform: translateY(0) translateX(0);
             transform: translateY(0) translateX(0);
     opacity: 1;
+  }
+}
+
+
+@media screen and (max-width: 768px){
+  main {
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100vh;
+  }
+  .leftMain {
+    width: 100%;
+    height: 40vh;
+    align-items: center;
+
+  }
+
+  .rightMain {
+    width: 100%;
+    height: 40vh;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .leftMain img {
+    height: 100%;
+  }
+
+  .rightMain h1 {
+    margin-top: 0rem;
+  }
+  
+  #subheading {
+    margin: 0;
+  }
+
+  .polterInfo {
+    flex-flow: wrap column;
+  }
+  .leftDetails {
+    width:100%;
+  }
+
+  .midDetails, .rightDetails {
+    width: 100%;
+}
+}
+
+@media screen and (max-width: 480px){
+  .strike {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .nav h1 {
+    font-size: 3rem;
+    line-height: 3rem;
   }
 }

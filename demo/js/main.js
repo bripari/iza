@@ -25,7 +25,7 @@ const observer2 = new IntersectionObserver(entries => {
 });
 
 observer2.observe(document.querySelector('.animate2'));
-observer2.observe(document.querySelector('.animate3'));
+//observer2.observe(document.querySelector('.animate3'));
 
 
 
