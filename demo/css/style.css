@@ -76,6 +76,7 @@ main {
   height: 88vh;
 }
 
+
 .leftMain, .rightMain {
   /* height: 500px; */
   padding: 2rem 2rem 2rem 2rem;
@@ -95,6 +96,7 @@ main {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  padding-right: 6rem;
 }
 
 .rightMain h1 {
@@ -105,9 +107,14 @@ main {
   line-height: 65px;
 }
 
+p {
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
 
 .subtitle {
-  font-weight: 500;
+  font-weight: 100;
   font-style: italic;
   font-size: 2.2rem;
   margin: 0
@@ -141,7 +148,9 @@ main {
 .polterInfo {
   
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   padding: 0 1rem 0 1rem;
   height: 100vh;;
   
@@ -199,8 +208,8 @@ main {
   display: flex;
   width: 65%;
   flex-direction: column;
-  align-items: flex-end;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
   text-align: justify;
 }
 
@@ -217,6 +226,7 @@ button {
   font-weight: 600;
   padding-top: 4px;
   margin: 0 5px;
+  text-decoration: none;
 }
 
 button:hover {
@@ -249,6 +259,62 @@ footer a:hover {
 
 .selected {
   color:rgb(145, 145, 145) !important;
+}
+
+
+
+.rightMain h2 {
+  font-size: 3rem;
+}
+
+/* NONFIC */
+
+.nonficIntro {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 4rem 0 0 0;
+}
+
+.nonficMain {
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 0 ;
+}
+
+
+.nonficLeft, .nonficRight {
+  padding-top: 3rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 3rem;
+  text-align: justify;
+
+}
+
+
+h4 {
+  padding: 2rem 0 2rem 0;
+  font-style: italic;
+}
+
+
+/* CONTACT PAGE */
+
+.fullMain {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fullMain h1 {
+  font-size: 3rem;
 }
 /* ANIMATIONS */
 
@@ -424,6 +490,36 @@ footer a:hover {
   }
 }
 
+.fade-in-fwd-ab {
+	-webkit-animation: fade-in-fwd .5s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;
+	        animation: fade-in-fwd .5s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;
+}
+
+@-webkit-keyframes fade-in-fwd {
+  0% {
+    -webkit-transform: translateZ(-80px);
+            transform: translateZ(-80px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-fwd {
+  0% {
+    -webkit-transform: translateZ(-80px);
+            transform: translateZ(-80px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
 
 
 .slide-in-top {
@@ -503,8 +599,38 @@ footer a:hover {
 }
 
 .slide-in-left {
-	-webkit-animation: slide-in-left .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3.0s both;
-	        animation: slide-in-left .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3.0s both;
+	-webkit-animation: slide-in-left .7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.0s both;
+	        animation: slide-in-left .7s cubic-bezier(0.250, 0.460, 0.450, 0.940) 2.0s both;
+}
+
+@-webkit-keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in-left-ab {
+	-webkit-animation: slide-in-left .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) .5s both;
+	        animation: slide-in-left .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) .5s both;
 }
 
 @-webkit-keyframes slide-in-left {
@@ -562,7 +688,13 @@ footer a:hover {
   }
 }
 
+/* MEDIA QUERIES */
 
+@media screen and (min-width: 981px){
+  .nonficFooter {
+    display: none;
+  }
+}
 @media screen and (max-width: 980px){
   main {
     flex-direction: column;
@@ -581,6 +713,7 @@ footer a:hover {
     height: 40vh;
     justify-content: flex-start;
     align-items: center;
+    padding-right: 2rem;
   }
 
   .leftMain img {
@@ -604,8 +737,12 @@ footer a:hover {
 
   .midDetails, .rightDetails {
     width: 100%;
+  }
+  .nonficLeft, .nonficRight {
+    width: 100%;
+  }
 }
-}
+
 
 @media screen and (max-width: 480px){
   .strike {
