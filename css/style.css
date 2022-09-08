@@ -875,5 +875,13 @@ h4 {
 }
 
 @media screen and (max-width: 480px){
-
+  #subheading {
+    font-size: 1.2rem !important;
+    font-weight: 100 !important;
+    padding-top: 1.5rem;
+  }
+  .rightMain h1 {
+    font-size: 2.5rem;
+    line-height: 2.8rem;
+  }
 }
