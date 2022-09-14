@@ -1,0 +1,311 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+img{
+  display: block;
+  margin: 0;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  font-family: 'League Spartan', serif; 
+  background-color: #ffffff;
+ 
+}
+
+.italic {
+  font-style: italic;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+/******************************************
+/* NAV MENU
+/*******************************************/
+
+.header {
+  background-color: #fff;
+  border-bottom: 2px solid black;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+
+.header ul {
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.header ul a {
+  display:block;
+  padding: 20px;
+  text-decoration: none;
+}
+
+.header ul a:hover {
+  background-color: #ddd;
+}
+
+.header .logo {
+  float: left;
+  display: block;
+  font-size: 3rem;
+  padding-top: 10px;
+  padding-left: 20px;
+  text-decoration: none;
+}
+
+.header .menu{
+  clear:both;
+  max-height: 0;
+  transition:max-height .2s ease-out;
+}
+
+.header .menu-icon{
+  padding-right: 20px;
+  padding-top: 32px;
+  position: relative;
+  float: right;
+  cursor: pointer;
+}
+
+.header .menu-icon .nav-icon {
+  background: #333;
+  display: block;
+  height: 2px;
+  width: 18px;
+  position: relative;
+  transition:background .2s ease-out;
+}
+
+.header .menu-icon .nav-icon:before {
+  background: #333;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition:all .2s ease-out;
+  top: 5px;
+}
+
+.header .menu-icon .nav-icon:after {
+  background: #333;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition:all .2s ease-out;
+  top: -5px;
+}
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon:before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon:after {
+  transform: rotate(45deg);
+  top: 0;
+
+}
+
+@media (min-width: 768px){
+  
+  .header {
+       display: flex;
+       justify-content: space-between;
+  }
+  .header li {
+       float: left;
+  }
+  .header li a {
+       padding: 9px 30px;
+  }
+  .header .menu {
+       clear: none;
+       max-height: none;
+  }
+  .header .menu-icon {
+       display: none;
+  }
+  .header ul a:hover {
+       background-color: #fff;
+       color: #bbb;
+  }
+}
+
+
+/******************************************
+/* INDEX/POLTER
+/*******************************************/
+
+.polterMain {
+  padding: 5rem 1rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.leftMain img {
+  height: 400px;
+  border: 1px solid black;
+}
+
+.leftMain, .rightMain {
+  padding: 6rem 2rem;
+  width: 40%;
+
+}
+
+.leftMain {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.rightMain h1 {
+  font-weight: 700;
+  font-size: 5rem;
+  margin-top: 4rem;
+  font-style: italic;
+  line-height: 65px;
+}
+
+.rightMain h2 {
+  padding-top: 1rem;
+}
+
+.subtitle {
+  font-weight: 100;
+  font-style: italic;
+  font-size: 2.2rem;
+  margin: 0
+}
+
+@media (max-width: 900px) {
+  .leftMain, .rightMain {
+    width: 100%;
+  }
+  .leftMain {
+    justify-content: center;
+    padding-top: 4rem;
+    padding-bottom: 0;
+  }
+  .rightMain {
+    padding-top: 1rem;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+  }
+}
+
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 4rem 0;
+  padding-top: 6rem;
+
+}
+
+.leftAbout, .rightAbout {
+  padding: 2rem;
+}
+
+.leftAbout {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: justify;
+
+}
+
+.leftAbout h2 {
+  text-align: right;
+  font-size: 3rem;
+  font-weight: 200;
+}
+
+.rightAbout {
+  width: 40%;
+}
+
+.rightAbout img {
+  height: 400px;
+  border: 1px solid black; 
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  padding: 25rem 2rem 10rem 2rem;
+}
+
+.leftContact, .rightContact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+}
+
+.leftContact h1 {
+  font-size: 3rem;
+  font-weight: 200;
+}
+
+@media (max-width: 720px){
+
+  .about {
+    flex-direction: column-reverse;
+  }
+  .leftAbout, .rightAbout {
+    width: 100%
+  }
+  .leftContact h1 {
+    text-align: center;
+    font-weight: 200;
+  }
+}
