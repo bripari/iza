@@ -19,69 +19,67 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	</head>
 	<body>
-		<nav class="nav">
-			<h1 class="slide-in-top">Iza Baranowski</h1>
-			<div class="hr scale-in-hor-center"></div>
-			<ul class="navbar fade-in">
-				<li><span class="italic underline"><a href="index.html">Polter</a></span></li>
-				<li><a href="nonfiction.html">Nonfiction</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-		</nav>
-		
-		<main>
-			<section class="leftMain">
+		<header class="header">
+			<div class="headerContain">
+			<a href=# class="logo tracking-in-expand-fwd">Iza Baranowski</a>
+				<div><input class="menu-btn" type="checkbox" id="menu-btn">
+				<label class="menu-icon" for="menu-btn"><span class="nav-icon fade-in-fwd"></span></label>
+				<ul class="menu fade-in-fwd">
+					<li><a href="#polter">Polter</a></li>
+					<li id="aboutNav"><a href="#about">About</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</div>
+			</div>
+				<div class="hr scale-in-hor-left"></div>
+		</header>
+		<div class="container">
+		<a name="polter"></a>
+        <main class="polterMain">
+            <section class="leftMain">
 			
-				<img class="slide-in-left" src="assets/img/isacover2.jpg">
+				<img class="fade-in-bottom" src="assets/img/isacover2.jpg">
 			</section>
-			<section class="rightMain fade-in-fwd-rt">
+			<section class="rightMain fade-in-left-img">
 				<h1>POLTER</h1>
-				<p class="subtitle">& THE OTHER SIDE</p>
-				<p id="subheading">The new novel from Iza Baranowski.</p>
-				<ul style="list-style: none; margin: 0; padding: 0; font-size: 2rem;">
-					<li id="scrollBtn"><i class="scrollIcon fa-solid fa-chevron-down fa-beat-fade"></i></li>
-				  </ul>
-				
-				
-			</section>
-		</main>
-			
-		<section class="polterInfo" id="polterDetails">
-			<section class="leftDetails">
-				<section class="animate">
-					<h1>POLTER</h1>
-					<p class="subtitle">& THE OTHER SIDE</p>
-				</section>
-				
-			</section>
-			<section class="midDetails animate2">
-					
-				<h2>Enter the world of POLTER, the new novel from Iza Baranowski.</h2>
+                <p class="subtitle">& THE OTHER SIDE</p>
+                <h2>Enter the world of POLTER, the new novel from Iza Baranowski.</h2>
 				<p>Lani wants to escape the dysfunctional life she leads with her mom. The intense nightmares and recent move to an eerie safehouse that’s supposed to protect them from her estranged father prove to be too much. But when a doppelganger named Polter appears one night with the offer to take away Lani’s problems and entire identity, will it be everything she wanted? </p>
 				<p>Before she can decide, Lani will have to confront old fears, figure out what her strange neighbor Magda wants, and discover there are things called “portals” that can take her to a place called The Other Side.
 				</p>
+
 				
-
+				
 			</section>
-			<section class="animate3">
-				<p><a href="/about.html">Learn more about Iza</a> | <a href="/contact.html">Contact</a></p>
+        </main>
+		<a name="about" id="about"> </a>
+		<section class="about">
+			<section class="leftAbout aboutTextAnimate">
+				<h2>ABOUT IZA</h2>
+				<p>Iza Baranowski was born in Australia and raised by her Polish mom. She lives in New York, and Polter is her first YA novel series.</p>
+				<p>As a child, Iza was already a storyteller. She grew up creating worlds in Polish for her sisters at home and English for her classmates at school. She later completed her Associate’s Degree in Writing at Melbourne’s RMIT University and a Bachelor's in Creative Writing at Deakin University.</p>
+				<p>In between working on creative nonfiction essays and the Polter book series, Iza edited manuscripts at an independent publisher in Brooklyn and has been active in the New York creative writing scene.</p>
+				
 			</section>
-
-
+			<section class="rightAbout aboutImgAnimate">
+				<img src="assets/img/izadrawing.png">
+			</section>	
 		</section>
-		<footer>
-			<ul class="navbarFooter fade-in">
-				<li><a href="index.html"><span class="italic" id="selected">Polter</span></a></li>
-				<li><a href="nonfiction.html">Nonfiction</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-			<p class="footerText">&copy; 2022 Iza Baranowski.  Website design by <a href="https://bripari.com/" target="_blank">bripari</a>.</p>
-		</footer>
 
-		
-
+		<section class="contact">
+			<a name="contact"> </a>
+			<section class="leftContact contactAnimate">
+				<h1>CONTACT</h1>
+			<!-- <p class="social"><span class="thin">Get in touch with Iza</span></p> -->
+			<p class="social">ig: <a href="https://www.instagram.com/izabaranowski/" target="_blank"><span class="thin">  @izabaranowski</span></a></p>
+			<p class="social">e: <a href="mailto:inquiries@izabaranowski.com" target="_blank"><span class="thin">inquires@izabaranowski.com</span></a></p>
+			</section>
+			<!-- <section class="rightContact fade-in-fwd-ab" id="rightContact">
+				<h2>CONTACT</h2> 
+	
+			</section> -->
+		</section>
+	</div>
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>

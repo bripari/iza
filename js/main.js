@@ -1,38 +1,41 @@
 //ANIMATE ON SCROLL
 
-const observer = new IntersectionObserver(entries => {
-  // Loop over the entries
+const aboutImgObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    // If the element is visible
     if (entry.isIntersecting) {
-      // Add the animation class
-      entry.target.classList.add('slide-in-tr');
+      entry.target.classList.add('fade-in-bottom-ab');
     }
   });
 });
 
-observer.observe(document.querySelector('.animate'));
+aboutImgObserver.observe(document.querySelector('.aboutImgAnimate'));
 
-const observer2 = new IntersectionObserver(entries => {
-  // Loop over the entries
+const aboutTextObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    // If the element is visible
     if (entry.isIntersecting) {
-      // Add the animation class
-      entry.target.classList.add('fade-in');
+      entry.target.classList.add('fade-in-right');
     }
   });
 });
 
-observer2.observe(document.querySelector('.animate2'));
-observer2.observe(document.querySelector('.animate3'));
+aboutTextObserver.observe(document.querySelector('.aboutTextAnimate'));
+
+const contactObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('focus-in-expand');
+    }
+  });
+});
+
+contactObserver.observe(document.querySelector('.contactAnimate'));
 
 
 
 
 // Scroll down button
-const scrollButton = () => {
-  document.getElementById("polterDetails").scrollIntoView({behavior: "smooth"})
+const aboutButton = () => {
+  document.getElementById("about").scrollIntoView({behavior: "smooth"})
  }
-document.getElementById("scrollBtn").addEventListener("click", scrollButton)
+document.getElementById("aboutNav").addEventListener("click", aboutButton)
 
