@@ -257,38 +257,6 @@ body {
   margin: 0;
   line-height: 10px;
 }
-@media (max-width: 1200px) {
-  .leftMain, .rightMain {
-    padding: 6rem 2rem;
-    width: 50%;
-  }
-  .polterMain{
-    padding: 5rem 0;
-  }
-}
-
-@media (max-width: 900px) {
-  .leftMain, .rightMain {
-    width: 100%;
-  }
-  .container {
-    width: 100%
-  }
-  .leftMain {
-    justify-content: center;
-    padding-top: 4rem;
-    padding-bottom: 0;
-  }
-  .rightMain {
-    padding: 1rem 3rem 6rem 3rem;
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    justify-content: center;
-    text-align: justify;
-  }
-}
-
 .about {
   display: flex;
   flex-wrap: wrap;
@@ -352,6 +320,45 @@ body {
 .social a:hover {
   color:#bbb
 }
+
+@media (max-width: 1200px) {
+  .leftMain, .rightMain {
+    padding: 6rem 2rem;
+    width: 50%;
+  }
+  .polterMain{
+    padding: 5rem 0;
+  }
+  .leftAbout, .rightAbout {
+    width: 50%;
+  }
+}
+
+@media (max-width: 900px) {
+  .leftMain, .rightMain {
+    width: 100%;
+  }
+  .container {
+    width: 100%
+  }
+  .leftMain {
+    justify-content: center;
+    padding-top: 4rem;
+    padding-bottom: 0;
+  }
+  .rightMain {
+    padding: 1rem 3rem 6rem 3rem;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+  }
+
+}
+
+
+
 
 @media (max-width: 720px){
 
