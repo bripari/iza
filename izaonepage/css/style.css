@@ -60,6 +60,15 @@ body {
   position: fixed;
   width: 100%;
   z-index: 3;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.headerContain {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .header ul {
@@ -82,7 +91,7 @@ body {
 .header .logo {
   float: left;
   display: block;
-  font-size: 3rem;
+  font-size: 2rem;
   padding-top: 10px;
   padding-left: 20px;
   text-decoration: none;
@@ -96,7 +105,7 @@ body {
 
 .header .menu-icon{
   padding-right: 20px;
-  padding-top: 32px;
+  padding-top: 26px;
   position: relative;
   float: right;
   cursor: pointer;
@@ -167,7 +176,7 @@ body {
        float: left;
   }
   .header li a {
-       padding: 9px 30px;
+       padding: 14px 30px 5px 30px;
   }
   .header .menu {
        clear: none;
@@ -179,6 +188,15 @@ body {
   .header ul a:hover {
        background-color: #fff;
        color: #bbb;
+  }
+
+  .header .logo {
+    float: left;
+    display: block;
+    font-size: 3rem;
+    padding-top: 10px;
+    padding-left: 20px;
+    text-decoration: none;
   }
 }
 
