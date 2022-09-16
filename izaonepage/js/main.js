@@ -23,7 +23,7 @@ aboutTextObserver.observe(document.querySelector('.aboutTextAnimate'));
 const contactObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('focus-in-contract-bck');
+      entry.target.classList.add('focus-in-expand');
     }
   });
 });
