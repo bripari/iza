@@ -216,7 +216,7 @@ body {
 .polterMain {
   padding: 5rem 1rem;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -264,7 +264,6 @@ body {
   justify-content: center;
   align-items: center;
   margin: 4rem 0;
-  padding-top: 2rem;
 
 }
 
@@ -365,7 +364,7 @@ body {
 
 @media (min-width: 720px){
   .about {
-    height: 100vh;
+    min-height: 100vh;
   }
 }
 @media (max-width: 720px){
@@ -373,7 +372,7 @@ body {
   .about {
     flex-direction: column-reverse;
     flex-wrap: wrap;
-    padding-top: 30rem;
+    padding-top: 0rem;
   }
   .leftAbout, .rightAbout {
     width: 100%
